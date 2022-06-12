@@ -7,10 +7,16 @@ const MainHeader = () => {
         <nav>
             <ul>
                 <li>
-                    <NavLink activeClassName={classes.active} to="/welcome">WELCOME</NavLink>
+                    <NavLink className={(navigationData) => navigationData.isActive ? classes.active : null} 
+                             to="/welcome">
+                        WELCOME
+                    </NavLink>
                 </li>
                 <li>
-                    <NavLink activeClassName={classes.active} to="/products">PRODUCTS</NavLink>
+                    <NavLink className={(navigationData) => navigationData.isActive ? classes.active : null} 
+                             to="/products">
+                        PRODUCTS
+                    </NavLink>
                 </li>
             </ul>
         </nav>
